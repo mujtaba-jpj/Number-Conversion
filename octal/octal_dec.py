@@ -6,4 +6,3 @@ def oct_dec(octal):
         l = l-1    
         decimal += pow(8,l) * int(x)    
     return decimal
-
