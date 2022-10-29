@@ -4,6 +4,4 @@ def oct_hex(octal):
     decimal = oct_dec(octal)
     hexadecimal = hex(decimal)
     hexadecimal = hexadecimal.split('x')[1]
-    print(hexadecimal)
-
-oct_hex("4414")
+    return hexadecimal
