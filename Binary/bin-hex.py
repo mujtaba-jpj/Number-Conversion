@@ -7,3 +7,4 @@ def bin_hex(bin):
     print(hexadecimal[1])
     return hexadecimal
 
+
