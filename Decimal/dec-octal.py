@@ -1,8 +1,5 @@
-#Initialzing and Assigning Octal
-Octal = (oct(int(input("Input a Decimal Number: "))))
+def dec_oct(dec):
+    octal = oct(dec)
+    octal = octal.split("o")[1]
+    return octal
 
-#Splitting the String
-FixedOctal = Octal.split("0o")
-
-#Displaying the Resulting Octal number
-print(FixedOctal[1])
