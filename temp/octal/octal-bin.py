@@ -5,3 +5,5 @@ def oct_bin(octal):
     binary = bin(decimal)
     Splitted_binary = binary.split('b')[1]
     return Splitted_binary
+
+
