@@ -2,6 +2,7 @@ from conversion.bin_conversion import *
 from conversion.dec_conversion import *
 from conversion.hex_conversion import *
 from conversion.octal_conversion import *
+from tkinter import messagebox
 from tkinter import *
 from tkinter import ttk 
 
@@ -9,6 +10,12 @@ window = Tk()
 window.resizable(width=FALSE,height=FALSE)
 window.geometry("700x500")
 
+options = [
+    "Binary",
+    "Decimal",
+    "Hexadecimal",
+    "Octal"
+]
 
 def convert():
     convert_from = combo1.get()
@@ -29,6 +36,7 @@ def convert():
     elif convert_from == "Decimal":
 
         if convert_to == "Binary":
+
             ans = dec_bin(conversion_num)
             result.config(text=ans)
 
@@ -67,14 +75,9 @@ def convert():
         elif convert_to == "Decimal":
             ans = oct_dec(conversion_num)
             result.config(text=ans)
+    else:
+        messagebox.showerror('Python Error', 'Error: This is an Error Message!')
 
-
-options = [
-    "Binary",
-    "Decimal",
-    "Hexadecimal",
-    "Octal"
-]
 
 #heading
 heading = Label(window,text="Number Conversion",font=("Calibri",25))
@@ -93,7 +96,7 @@ entry1.place(x=95,y=325)
 combo2 = ttk.Combobox(window,values=options,state="readonly",font = ("Courier",11))
 combo2.current(1) #Default Value
 combo2.place(x=450,y=300)
-result = Label(window,font = ("Arial",11,"bold"),borderwidth=5,text='                                       ',bg="white",relief=RAISED)
+result = Label(window,font = ("Arial",11,"bold"),borderwidth=5,text='',bg="white",relief=RAISED)
 result.place(x=450,y=325)
 
 
@@ -104,4 +107,3 @@ if __name__ == "__main__":
     window.mainloop()
 
 
-# window.mainloop()
