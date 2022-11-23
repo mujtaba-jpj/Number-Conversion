@@ -7,6 +7,7 @@ from tkinter import *
 from tkinter import ttk
 
 window = Tk()
+window.title("Number Conversion")
 window.resizable(width=FALSE, height=FALSE)
 window.geometry("700x500")
 
@@ -77,8 +78,6 @@ def convert():
             elif convert_to == "Decimal":
                 ans = oct_dec(conversion_num)
                 result.config(text=ans)
-            elif convert_from == convert_to:
-                print("E")
     except ValueError:
         messagebox.showwarning(title="Value Error",
                                message="Please enter a valid value")
@@ -112,5 +111,5 @@ convert = Button(window, text="Convert!", command=convert, font=(
     "Comic Sans", 16), bg="#545c58", activebackground="#7d827f")
 convert.place(x=310, y=300)
 
-if __name__ == "__main__":
-    window.mainloop()
+
+window.mainloop()
